@@ -31,7 +31,7 @@ const QualitiesTable = ({ data, onEdit, onDelete }) => {
             ),
         },
     };
-    if (data.length > 0) return <Table columns={columns} data={data} />;
+    if (data?.length > 0) return <Table columns={columns} data={data} />;
     return null;
 };
 

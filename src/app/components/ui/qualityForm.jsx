@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import SelectField from "../common/form/selectField";
 import TextField from "../common/form/textField";
 import colors from "../../constants/colors.json";
 import useForm from "../../hooks/useForm";
 
-const CreateForm = ({ onSubmit }) => {
-    const { form, handeleSubmit, handleChange } = useForm({}, onSubmit);
-
+const QualityForm = ({ data, onSubmit }) => {
+    const { form, handeleSubmit, handleChange } = useForm(data, onSubmit);
     return (
         <form onSubmit={handeleSubmit}>
             <TextField
@@ -27,4 +26,4 @@ const CreateForm = ({ onSubmit }) => {
     );
 };
 
-export default CreateForm;
+export default QualityForm;
